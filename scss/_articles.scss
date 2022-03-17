@@ -5,30 +5,39 @@
 .article {
 
     &__grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.75rem; 
 
         @include breakpoint-up(medium) {
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-wrap: wrap;
         }
-
-        @include breakpoint-up(large) {
-            grid-template-columns:  repeat(4, 1fr);
-        }
-
     }
 
     &__item {
 
-        border-radius: 0.3125rem;
+        padding: 0.9375rem;
+        
         overflow: hidden;
-        background-color: $white;
-        box-shadow: 0px 3px 12px rgba(0,0,0,0.15);
+        
         transition: all 120ms ease-in-out;
 
+        
         &:hover {
             transform: scale(1.05);
+        }
+
+        @include breakpoint-up(medium) {
+            flex: 1 0 50%;
+            margin-bottom: 1rem;
+        }
+        @include breakpoint-up(large) {
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+            flex: 1;
+            border-radius: 0.3125rem;
+            background-color: $white;
+            box-shadow: 0px 3px 12px rgba(0,0,0,0.15);
         }
     }
 
@@ -45,6 +54,8 @@
 
         @include breakpoint-up(medium) {
             padding: 1.875rem 1.5625rem;
+  
+            
         }
     }
 
