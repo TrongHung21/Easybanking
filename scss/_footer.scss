@@ -24,7 +24,7 @@
         margin-bottom: 1.875rem;
 
         @include breakpoint-up(large) {
-            grid-area: logo;
+            grid-area: "logo";
         }
     }
 
@@ -33,7 +33,7 @@
         margin-bottom: 1.875rem;
 
         @include breakpoint-up(large) {
-            grid-area: social;
+            grid-area: 'social';
         }
 
         a:not(:last-child) {   
@@ -48,7 +48,7 @@
 
         &.col1 {
             @include breakpoint-up(large) {
-                grid-area: links1;
+                grid-area: 'links1';
             }
         }
         
@@ -56,7 +56,7 @@
         &.col2 {
             margin-bottom: 1.875rem;
             @include breakpoint-up(large) {
-                grid-area: links2;
+                grid-area: 'links2';
             }
         }
     }
@@ -74,7 +74,7 @@
     &__cta {
 
         @include breakpoint-up(large) {
-            grid-area: cta1;
+            grid-area: 'cta1';
         }
         a.button {
             margin-bottom: 1.875rem;
@@ -86,7 +86,7 @@
         color: $grayishBlue;
     
         @include breakpoint-up(large) {
-          grid-area: cta2;
+          grid-area: 'cta2';
         }
       }
 
